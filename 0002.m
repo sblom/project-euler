@@ -1,1 +1,2 @@
-Total[Select[Table[Fibonacci[i], {i, 33}], EvenQ]]
+<<Lazy`
+Total[Lazy[Fibonacci] ~TakeWhile~ (# < 2000000 &) ~Select~ EvenQ]
