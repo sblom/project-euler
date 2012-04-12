@@ -1,2 +1,2 @@
-<<Streams`
-FoldList[Plus, 0, StreamSource[Prime]~TakeWhile~(# < 2000000 &)]
+Needs["Lazy`"]
+Total[Lazy[Primes]~TakeWhile~(# < 2000000 &)]
